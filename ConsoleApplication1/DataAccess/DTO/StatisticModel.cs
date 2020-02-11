@@ -18,9 +18,9 @@ namespace ConsoleApplication1.DTO
         public short? enabledNodeId { get; set; }
 
 
-        public DateTime dateOfChange { get; set; }
-        public DateTime lastSync { get; set; }
-        public DateTime firstSync { get; set; }
+        public DateTime? dateOfChange { get; set; }
+        public DateTime? lastSync { get; set; }
+        public DateTime? firstSync { get; set; }
         
         public string status { get; set; }
       

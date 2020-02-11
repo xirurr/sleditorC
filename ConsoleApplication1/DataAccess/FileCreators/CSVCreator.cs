@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -13,7 +13,7 @@ namespace ConsoleApplication1.DataAccess.FileCreators
 {
     public class CSVCreator : AbstractCreator
     {
-        public FileInfo fileInfo { get; }
+       public string filePath { get; private set; }
 
         public CSVCreator(string dbName) : base(dbName)
         {
@@ -35,8 +35,8 @@ namespace ConsoleApplication1.DataAccess.FileCreators
 
            
             
-            string filename = Path.Combine(finalPath, "statistic.csv");
-            string dir = Path.GetDirectoryName(filename);
+            filePath = Path.Combine(finalDir, "statistic.csv");
+            string dir = Path.GetDirectoryName(filePath);
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);
@@ -46,8 +46,7 @@ namespace ConsoleApplication1.DataAccess.FileCreators
             var data = Encoding.GetEncoding(1251).GetBytes(myExport.Export());
             var array = Encoding.GetEncoding(1251).GetPreamble().Concat(data).ToArray();
             
-            File.WriteAllBytes(filename,array);
-            Console.WriteLine(1);
+            File.WriteAllBytes(filePath,array);
             
             
             

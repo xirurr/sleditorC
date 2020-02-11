@@ -19,6 +19,7 @@ namespace ConsoleApplication1.Base
         private List<Statistic> statisticList { get; set; } = new List<Statistic>();
         private CSVCreator csvCreator;
         private ExcelCreator excelCreator;
+        private const string outputDateFormat = "MMM yyyy";
 
         public ProjectController(ProjectConfig projectConfig)
         {
@@ -41,6 +42,7 @@ namespace ConsoleApplication1.Base
             csvCreator.CreatCSV(statisticList);
             excelCreator.CreateExcel(statisticList);
             SendMail();
+            Console.WriteLine("ВЫПОЛНЕНО,ОЛЕЖА");
             return statisticList;
         }
 
@@ -181,8 +183,8 @@ namespace ConsoleApplication1.Base
                 foreach (var statistic in statisticList.Where(statistic =>
                     statistic.distrId.Equals(tmpStatistic.distrId)))
                 {
-                    if (tmpStatistic.status.ToLower().Equals("Enabled") &&
-                        tmpStatistic.status.ToLower().Equals("disabled"))
+                    if (tmpStatistic.status.ToLower().Equals("enabled") &&
+                        statistic.status.ToLower().Equals("disabled"))
                     {
                         tmpStatistic.dateOfChange = statistic.dateOfChange;
                         statistic.deletedMark = true;
@@ -201,6 +203,7 @@ namespace ConsoleApplication1.Base
                         {
                             tmpStatistic.dateOfChange = statistic.dateOfChange;
                             statistic.deletedMark = true;
+
                         }
                         else
                         {
@@ -216,7 +219,11 @@ namespace ConsoleApplication1.Base
         private List<Statistic> DeleteMarkedElements(List<Statistic> tmpList)
         {
             Console.WriteLine("удаление дубликатов");
-            return tmpList.Where(x => !x.deletedMark).ToList();
+            Console.WriteLine(tmpList.Count+" размер до");
+          
+            var deleteMarkedElements = tmpList.Where(x => !x.deletedMark).ToList();
+            Console.WriteLine(deleteMarkedElements.Count+ "размер после");
+            return deleteMarkedElements;
         }
 
 
@@ -225,15 +232,14 @@ namespace ConsoleApplication1.Base
             var smtpEmailService = new SmtpEmailService(instance.mailServer, int.Parse(instance.mailPort),
                 instance.mailUser,
                 instance.mailPassword);
-            const string outputDateFormat = "MMM yyyy";
-            DateTime tmpDate = DateTime.ParseExact(instance.date, "yyyy-MM-dd HH:mm:ss",
+            DateTime tmpDate = DateTime.ParseExact(instance.date, "yyyyMMdd",
                 CultureInfo.InvariantCulture);
 
             string fileBaseName = projectConfig.dataBase + " " + tmpDate.ToString(outputDateFormat);
 
             List<Attachment> attachments = new List<Attachment>();
-            var csvAttachment = new Attachment(csvCreator.fileInfo.ToString());
-            var excelAttachment = new Attachment(excelCreator.fileInfo.ToString());
+            var csvAttachment = new Attachment(csvCreator.filePath);
+            var excelAttachment = new Attachment(excelCreator.filePath);
             csvAttachment.Name = fileBaseName + ".csv";
             excelAttachment.Name = fileBaseName + ".xls";
 
@@ -242,7 +248,7 @@ namespace ConsoleApplication1.Base
 
 
             smtpEmailService.Send("статистика использования по " + projectConfig.dataBase, "отчет в приложении",
-                instance.mailUser, projectConfig.recipientsForOneList.ToArray(), null, null, attachments);
+                instance.mailUser, projectConfig.recipientsForOneList.ToArray(), new string[0] , new string[0], attachments);
         }
     }
 }

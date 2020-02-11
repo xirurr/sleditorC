@@ -12,15 +12,14 @@ namespace ConsoleApplication1.DataAccess.FileCreators
 
     {
         int rownum = 0;
-        public FileInfo fileInfo { get; }
-       
+        public string filePath { get; private set; }
         public ExcelCreator(string dbName) : base(dbName)
         {
         }
 
         public void CreateExcel(List<Statistic> statisticList)
         {
-            var fileInfo = new FileInfo(finalPath+"statistic.csv");
+            FileInfo fileInfo = new FileInfo(finalDir+"statistic.xls");
             var workbook = new HSSFWorkbook();
             var sheet = workbook.CreateSheet("DistributorStatistic");
             var rowhead = sheet.CreateRow((short) rownum++);
@@ -41,6 +40,8 @@ namespace ConsoleApplication1.DataAccess.FileCreators
             }
             var fileStream = fileInfo.Create();
             workbook.Write(fileStream);
+            fileStream.Close();
+            filePath = fileInfo.ToString();
         }
     }
 }
