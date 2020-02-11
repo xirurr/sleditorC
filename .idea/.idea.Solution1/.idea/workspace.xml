@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="afea08e6-63dd-4999-9880-921a0debeae0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/riderModule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneDistributorsDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Protocol.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/refDistributorsDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/AbstractCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/HTMLCreator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileReaders/IXmlReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileReaders/XmlReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Exceptions/EmptyConfigFieldException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Exceptions/LackOfInformationException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Services/IOutgoingEmailService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Services/SqlConnectService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/packages.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Solution1.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/System.Threading.Tasks.Dataflow.4.11.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/THIRD-PARTY-NOTICES.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/lib/netstandard1.0/System.Threading.Tasks.Dataflow.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/lib/netstandard1.0/System.Threading.Tasks.Dataflow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/lib/netstandard1.1/System.Threading.Tasks.Dataflow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/lib/netstandard2.0/System.Threading.Tasks.Dataflow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/useSharedDesignerContext.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Dataflow.4.11.0/version.txt" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ch_erwin_alpha@dbsrv" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ch_erwin_alpha@dbsrv" type="feb32156:DbDataSourceImpl" />
+        <item name="ch_erwin_alpha: database" type="ccb7ac2a:MsImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ch_erwin_alpha@dbsrv" type="feb32156:DbDataSourceImpl" />
+        <item name="ch_erwin_alpha: database" type="ccb7ac2a:MsImplModel$Database" />
+        <item name="dbo: schema" type="2865ee2e:MsImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+              <folding>
+                <marker date="1581420208942" expanded="false" signature="6:249" ph="..." />
+                <marker date="1581420208942" expanded="true" signature="304:1646" ph="{...}" />
+                <marker date="1581420208942" expanded="true" signature="352:1644" ph="{...}" />
+                <marker date="1581420208942" expanded="true" signature="457:477" ph="{...}" />
+                <marker date="1581420208942" expanded="true" signature="538:1638" ph="{...}" />
+                <marker date="1581420208942" expanded="true" signature="722:1028" ph="{...}" />
+                <marker date="1581420208942" expanded="true" signature="899:1014" ph="{...}" />
+                <marker date="1581420208942" expanded="true" signature="1224:1300" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/refDistributorsDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneDistributorsDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/AbstractCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Services/SqlConnectService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Exceptions/EmptyConfigFieldException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Exceptions/LackOfInformationException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileReaders/IXmlReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileReaders/XmlReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Protocol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Services/IOutgoingEmailService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Base/ProjectConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/CsvExport.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DTO/Protocol.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Exceptions/LackOfInformationException.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Exceptions/EmptyConfigFieldException.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DTO/Statistic.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Pools/ThreadPool.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/фыв.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/в.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/IOutgoingEmailService.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Properties/DataAccess/FileReaders/XmlReader.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Program.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileReaders/IXmlReader.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/pro/start.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileReaders/XmlReader.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/config.xml" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/pro/LENA.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/SqlConnectService.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/refDistributors.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsModel.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/rdTestModel.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/rdTestDBO.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/RdTestDbo.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DBContext.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessions.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsDTO.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModelR.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/AbstractCreator.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/HTMLCreator.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectConfig.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneDistributorsDTO.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/refDistributorsDTO.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2d9d14ff-0a6b-4b5d-9531-8372ed7013a1/console.sql" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModel.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/CsvExportWithDelimiters.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/CsvDelimiterService.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/CsvWithEncoding.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\gg\RiderProjects\Solution1\.idea\.idea.Solution1\.idea" />
+        <option value="C:\Users\gg\YandexDisk\GIT\C#\Solution1\.idea\.idea.Solution1\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1934" />
+    <option name="y" value="-234" />
+    <option name="width" value="1240" />
+    <option name="height" value="679" />
+  </component>
+  <component name="ProjectId" id="1XAqpYLa8mxs4Je7BsW9DGJ34S2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Solution1" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Solution1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ConsoleApplication1" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Solution1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ConsoleApplication1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="DataAccess" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Solution1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ConsoleApplication1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="DataAccess" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="FileCreators" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Solution1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ConsoleApplication1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="DataAccess" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="FileReaders" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Solution1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ConsoleApplication1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Exceptions" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Solution1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ConsoleApplication1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TWShift.4" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ConsoleApplication1" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ch_erwin_alpha@dbsrv" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ch_erwin_alpha@dbsrv" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2090528c" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afea08e6-63dd-4999-9880-921a0debeae0" name="Default Changelist" comment="" />
+      <created>1580499430555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580499430555</updated>
+      <workItem from="1580499433830" duration="5677000" />
+      <workItem from="1580570301876" duration="3245000" />
+      <workItem from="1580582430102" duration="1996000" />
+      <workItem from="1580661707891" duration="6625000" />
+      <workItem from="1580765238425" duration="3090000" />
+      <workItem from="1580769117120" duration="121000" />
+      <workItem from="1580769261044" duration="405000" />
+      <workItem from="1580912722267" duration="2053000" />
+      <workItem from="1580983703493" duration="6849000" />
+      <workItem from="1581018035096" duration="4271000" />
+      <workItem from="1581149594276" duration="7147000" />
+      <workItem from="1581158556706" duration="702000" />
+      <workItem from="1581159326651" duration="958000" />
+      <workItem from="1581160704496" duration="3484000" />
+      <workItem from="1581164585601" duration="437000" />
+      <workItem from="1581167456198" duration="2438000" />
+      <workItem from="1581253708591" duration="3789000" />
+      <workItem from="1581267682376" duration="3333000" />
+      <workItem from="1581278886555" duration="8704000" />
+      <workItem from="1581320124254" duration="596000" />
+      <workItem from="1581321896340" duration="69000" />
+      <workItem from="1581322833591" duration="10735000" />
+      <workItem from="1581347998562" duration="1630000" />
+      <workItem from="1581366932292" duration="8301000" />
+      <workItem from="1581419815926" duration="393000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="393000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-217" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#SQL_Dialects" timestamp="1581279641543">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1581279641543" />
+    <state x="891" y="126" width="838" height="722" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581165835356">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="891" y="126" width="838" height="722" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581165835356" />
+    <state x="703" y="95" key="CheckoutDialog.Title" timestamp="1580571761904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="703" y="95" key="CheckoutDialog.Title/0.0.1920.1040@0.0.1920.1040" timestamp="1580571761904" />
+    <state width="678" height="466" key="DebuggerActiveHint" timestamp="1581168939423">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="678" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1581168939423" />
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1581376976591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976591" />
+    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1581376976591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976591" />
+    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1581376976591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976591" />
+    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1581376976591">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976591" />
+    <state width="1877" height="293" key="GridCell.Tab.1.bottom" timestamp="1581376984561">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581376984561" />
+    <state width="1877" height="293" key="GridCell.Tab.1.center" timestamp="1581376984561">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581376984561" />
+    <state width="1877" height="293" key="GridCell.Tab.1.left" timestamp="1581376984561">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581376984561" />
+    <state width="1877" height="293" key="GridCell.Tab.1.right" timestamp="1581376984561">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581376984561" />
+    <state width="1877" height="293" key="GridCell.Tab.2.bottom" timestamp="1581376976431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976431" />
+    <state width="1877" height="293" key="GridCell.Tab.2.center" timestamp="1581376976431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976431" />
+    <state width="1877" height="293" key="GridCell.Tab.2.left" timestamp="1581376976431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976431" />
+    <state width="1877" height="293" key="GridCell.Tab.2.right" timestamp="1581376976431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976431" />
+    <state width="1877" height="293" key="GridCell.Tab.3.bottom" timestamp="1581376976432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976432" />
+    <state width="1877" height="293" key="GridCell.Tab.3.center" timestamp="1581376976431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976431" />
+    <state width="1877" height="293" key="GridCell.Tab.3.left" timestamp="1581376976431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976431" />
+    <state width="1877" height="293" key="GridCell.Tab.3.right" timestamp="1581376976431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976431" />
+    <state width="1877" height="293" key="GridCell.Tab.4.bottom" timestamp="1581376976432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976432" />
+    <state width="1877" height="293" key="GridCell.Tab.4.center" timestamp="1581376976432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976432" />
+    <state width="1877" height="293" key="GridCell.Tab.4.left" timestamp="1581376976432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976432" />
+    <state width="1877" height="293" key="GridCell.Tab.4.right" timestamp="1581376976432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581376976432" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1581368162447">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1581368162447" />
+    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size" timestamp="1580499462413">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1580499462413" />
+    <state x="1009" y="150" width="579" height="622" key="RiderGenerateDialog" timestamp="1581376774705">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1009" y="150" width="579" height="622" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581376774705" />
+    <state x="499" y="233" key="SettingsEditor" timestamp="1581157255556">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="499" y="233" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581157255556" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1581263739015">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1581263739015" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581288612842">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581288612842" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1581166892352">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581166892352" />
+    <state x="637" y="252" width="646" height="536" key="find.popup" timestamp="1581157277399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="637" y="252" width="646" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581157277399" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1580511982638">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580511982638" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581162800964">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581162800964" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs</url>
+          <line>69</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" initialLine="66">
+            <startOffsets>
+              <option value="1845" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1902" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="context" language="C#" custom="RiderImportsList:" />
+        <watch expression="statisticList" language="C#" custom="RiderImportsList:" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/CsvExport.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2941">
+          <caret line="178" column="22" selection-start-line="178" selection-start-column="22" selection-end-line="178" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/Services/CsvWithEncoding.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <marker date="1581420208942" expanded="false" signature="6:249" ph="..." />
+            <marker date="1581420208942" expanded="true" signature="304:1646" ph="{...}" />
+            <marker date="1581420208942" expanded="true" signature="352:1644" ph="{...}" />
+            <marker date="1581420208942" expanded="true" signature="457:477" ph="{...}" />
+            <marker date="1581420208942" expanded="true" signature="538:1638" ph="{...}" />
+            <marker date="1581420208942" expanded="true" signature="722:1028" ph="{...}" />
+            <marker date="1581420208942" expanded="true" signature="899:1014" ph="{...}" />
+            <marker date="1581420208942" expanded="true" signature="1224:1300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
