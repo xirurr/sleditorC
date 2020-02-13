@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net.Mail;
+using System.Threading;
 using ConsoleApplication1.DataAccess;
 using ConsoleApplication1.DataAccess.FileCreators;
 using ConsoleApplication1.DTO;
 using ConsoleApplication1.Services;
 using Microsoft.Xrm.Sdk.Metadata;
+using NPOI.HSSF.Record;
 
 namespace ConsoleApplication1.Base
 {
@@ -17,9 +19,13 @@ namespace ConsoleApplication1.Base
         private AllConfig instance = AllConfig.GetInstance();
         private ProjectConfig projectConfig { get; set; }
         private List<Statistic> statisticList { get; set; } = new List<Statistic>();
-        private CSVCreator csvCreator;
-        private ExcelCreator excelCreator;
+        public CSVCreator csvCreator { get; private set; }
+        public ExcelCreator excelCreator { get; private set; }
         private const string outputDateFormat = "MMM yyyy";
+
+
+        public Attachment csvAttachment { get; private set; }
+        public Attachment excelAttachment { get; private set; }
 
         public ProjectController(ProjectConfig projectConfig)
         {
@@ -30,26 +36,30 @@ namespace ConsoleApplication1.Base
         {
             projectConfig.CreateConnectionUrl();
             context = new DbDataContext(projectConfig.sqlBuilder.ToString());
+            
         }
 
         public List<Statistic> getStatistics()
         {
             PrepareConnectionToBd();
-            GetR4000Data();
+            if (!GetR4000Data())
+            {
+                return null;
+            }
+
             GetCiceroneData();
             csvCreator = new CSVCreator(projectConfig.dataBase);
             excelCreator = new ExcelCreator(projectConfig.dataBase);
             csvCreator.CreatCSV(statisticList);
             excelCreator.CreateExcel(statisticList);
             SendMail();
-            Console.WriteLine("ВЫПОЛНЕНО,ОЛЕЖА");
+            Console.WriteLine(projectConfig.dataBase + " работа выполнена");
             return statisticList;
         }
 
-        private void GetR4000Data()
+        private bool GetR4000Data()
         {
             Console.WriteLine("получение данных по протоколу R4000 для " + projectConfig.dataBase);
-            List<Statistic> tmpListCicerone = new List<Statistic>();
             var query = context.Database.SqlQuery<StatisticModel>(
                 "select MAX(ChangeDate) ChangeDate, idRecord\n" +
                 "into #cd1\n" +
@@ -63,7 +73,7 @@ namespace ConsoleApplication1.Base
                 "where Date >=\'" + instance.date + "\' \n" +
                 "group by TenantId;\n" +
                 "with st as(\n" +
-                "select ChangeDate, idRecord, NewValue useReplicator4000Log from v_LogDataChange where (ChangeDate in (select ChangeDate from #cd1) and idRecord in (select idRecord from #cd1))\n" +
+                "select ChangeDate, idRecord, NewValue useReplicator4000Log from v_LogDataChange where (ChangeDate in (select ChangeDate from #cd1) and idRecord in (select idRecord from #cd1) and FieldName = 'usereplicator4000')\n" +
                 "),\n" +
                 "finalStat as \n" +
                 "(select rde.UseReplicator4000 useReplicator4000, rde.id idDistr,st.ChangeDate ChangeDate, st.idRecord, st.useReplicator4000Log useReplicator4000Log from refDistributorsExt  rde\n" +
@@ -75,45 +85,54 @@ namespace ConsoleApplication1.Base
                 "drop table #cd1,#statistc"
             );
 
-
-            foreach (var statisticModel in query)
+            try
             {
-                var statistic = new Statistic();
-                if (!statisticModel.useReplicator4000.Equals(statisticModel.useReplicator4000Log))
+                foreach (var statisticModel in query)
                 {
-                    statistic.dateOfChange = null;
+                    var statistic = new Statistic();
+                    if (!statisticModel.useReplicator4000.Equals(statisticModel.useReplicator4000Log))
+                    {
+                        statistic.dateOfChange = null;
+                    }
+
+                    if (String.IsNullOrWhiteSpace(statisticModel.useReplicator4000) ||
+                        statisticModel.useReplicator4000.Equals("0"))
+                    {
+                        statistic.status = "Disabled";
+                    }
+                    else
+                    {
+                        statistic.status = "Enabled";
+                    }
+
+                    statistic.nameOfDistr = statisticModel.statisticName;
+                    statistic.nodeId = statisticModel.statisticNodeId;
+                    statistic.distrId = statisticModel.statistcDistr;
+                    statistic.dateOfChange = statisticModel.dateOfChange;
+                    statistic.firstSession = statisticModel.firstSync;
+                    statistic.lastSession = statisticModel.lastSync;
+                    statistic.protocol = Protocol.R4000;
+                    statisticList.Add(statistic);
+                }
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("0x80131904") || e.Message.Contains("Login failed."))
+                {
+                    Console.WriteLine("Ошибка логина " + projectConfig.server);
+                    return false;
                 }
 
-                if (String.IsNullOrWhiteSpace(statisticModel.useReplicator4000) ||
-                    statisticModel.useReplicator4000.Equals("0"))
-                {
-                    statistic.status = "Disabled";
-                }
-                else
-                {
-                    statistic.status = "Enabled";
-                }
-
-                statistic.nameOfDistr = statisticModel.statisticName;
-                statistic.nodeId = statisticModel.statisticNodeId;
-                statistic.distrId = statisticModel.statistcDistr;
-                statistic.dateOfChange = statisticModel.dateOfChange;
-                statistic.firstSession = statisticModel.firstSync;
-                statistic.lastSession = statisticModel.lastSync;
-                /*statistic.dateOfChange = DateTime.ParseExact(statisticModel.dateOfChange, "yyyy-MM-dd HH:mm:ss",
-                    CultureInfo.InvariantCulture);
-                statistic.firstSession = DateTime.ParseExact(statisticModel.firstSync, "yyyy-MM-dd HH:mm:ss",
-                    CultureInfo.InvariantCulture);
-                statistic.lastSession = DateTime.ParseExact(statisticModel.lastSync, "yyyy-MM-dd HH:mm:ss",
-                    CultureInfo.InvariantCulture);*/
-                statistic.protocol = Protocol.R4000;
-                statisticList.Add(statistic);
+                Console.WriteLine(e.Message);
+                throw;
             }
 
             if (statisticList.Count == 0)
             {
-                Console.WriteLine(projectConfig.dataBase + " не использовал R4000 в этом периоде");
+                Console.WriteLine(projectConfig.dataBase + " отсутствуют данные по R4000");
             }
+
+            return true;
         }
 
         private void GetCiceroneData()
@@ -160,7 +179,7 @@ namespace ConsoleApplication1.Base
             }
             catch (Exception e)
             {
-                if (e.Message.Contains("Invalid object name \'cicerone.Distributors\'"))
+                if (e.Message.Contains("cicerone.Distributors"))
                 {
                     Console.WriteLine(projectConfig.dataBase + " :отсутствуют данные по Cicerone");
                 }
@@ -177,6 +196,7 @@ namespace ConsoleApplication1.Base
 
         private void CombineR4000AndCiceroneData(List<Statistic> tmpListCicerone)
         {
+            if (tmpListCicerone.Count < 1) return;
             Console.WriteLine("CombiningR4000AndCiceroneData");
             foreach (var tmpStatistic in tmpListCicerone)
             {
@@ -203,7 +223,6 @@ namespace ConsoleApplication1.Base
                         {
                             tmpStatistic.dateOfChange = statistic.dateOfChange;
                             statistic.deletedMark = true;
-
                         }
                         else
                         {
@@ -219,36 +238,50 @@ namespace ConsoleApplication1.Base
         private List<Statistic> DeleteMarkedElements(List<Statistic> tmpList)
         {
             Console.WriteLine("удаление дубликатов");
-            Console.WriteLine(tmpList.Count+" размер до");
-          
+            Console.WriteLine(tmpList.Count + " размер до " + projectConfig.dataBase);
             var deleteMarkedElements = tmpList.Where(x => !x.deletedMark).ToList();
-            Console.WriteLine(deleteMarkedElements.Count+ "размер после");
+            Console.WriteLine(deleteMarkedElements.Count + "размер после " + projectConfig.dataBase);
             return deleteMarkedElements;
         }
 
 
         private void SendMail()
+
         {
+            DateTime tmpDate = DateTime.ParseExact(instance.date, "yyyyMMdd",
+                CultureInfo.InvariantCulture);
+            string fileBaseName = projectConfig.dataBase + " " + tmpDate.ToString(outputDateFormat);
+
+            csvAttachment = new Attachment(csvCreator.filePath);
+            excelAttachment = new Attachment(excelCreator.filePath);
+            csvAttachment.Name = fileBaseName + ".csv";
+            excelAttachment.Name = fileBaseName + ".xls";
+
+
+            if (projectConfig.recipientsForOneList.Count <= 1)
+            {
+                if (string.IsNullOrWhiteSpace(projectConfig.recipientsForOneList[0]))
+                {
+                    Console.WriteLine("отсутвует список рассылки по " + projectConfig.server);
+                    return;
+                }
+            }
+
             var smtpEmailService = new SmtpEmailService(instance.mailServer, int.Parse(instance.mailPort),
                 instance.mailUser,
                 instance.mailPassword);
-            DateTime tmpDate = DateTime.ParseExact(instance.date, "yyyyMMdd",
-                CultureInfo.InvariantCulture);
 
-            string fileBaseName = projectConfig.dataBase + " " + tmpDate.ToString(outputDateFormat);
 
             List<Attachment> attachments = new List<Attachment>();
-            var csvAttachment = new Attachment(csvCreator.filePath);
-            var excelAttachment = new Attachment(excelCreator.filePath);
-            csvAttachment.Name = fileBaseName + ".csv";
-            excelAttachment.Name = fileBaseName + ".xls";
+
 
             attachments.Add(csvAttachment);
             attachments.Add(excelAttachment);
 
 
             smtpEmailService.Send("статистика использования по " + projectConfig.dataBase, "отчет в приложении",
-                instance.mailUser, projectConfig.recipientsForOneList.ToArray(), new string[0] , new string[0], attachments);
+                instance.mailUser, projectConfig.recipientsForOneList.ToArray(), new string[0], new string[0],
+                attachments);
         }
     }
 }

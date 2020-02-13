@@ -117,9 +117,9 @@ namespace ConsoleApplication1.DTO
             parameters.Add("протокол", protocol.ToString());
             parameters.Add("состояние", status);
             parameters.Add(
-                "первая сессия периода", firstSession.ToString());
+                "первая сессия периода", value: firstSession != null ? firstSession.ToString() : "нет сессий за период");
             parameters.Add(
-                "последняя сессия периода", lastSession.ToString());
+                "последняя сессия периода", value: lastSession != null ? lastSession.ToString() : "нет сессий за период");
             return parameters;
         }
     }

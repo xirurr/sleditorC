@@ -23,14 +23,22 @@ namespace ConsoleApplication1.DataAccess.FileCreators
         {
             var allConfig = AllConfig.GetInstance();
             var myExport = new CsvExport(allConfig.delimiter,true);
-            foreach (var statistic in statisticList)
+            if (statisticList.Count>0)
             {
-                myExport.AddRow();
-                var listElements = statistic.listElements();
-                foreach (var listElementsKey in listElements.Keys)
+                foreach (var statistic in statisticList)
                 {
-                    myExport[listElementsKey] = listElements[listElementsKey];
+                    myExport.AddRow();
+                    var listElements = statistic.listElements();
+                    foreach (var listElementsKey in listElements.Keys)
+                    {
+                        myExport[listElementsKey] = listElements[listElementsKey];
+                    }
                 }
+            }
+            else
+            {
+             myExport.AddRow();
+             myExport["no info"] = "Отсутвуют данные за период";
             }
 
            

@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using ConsoleApplication1.Base;
 using ConsoleApplication1.DataAccess;
 using ConsoleApplication1.DataAccess.FileReaders;
 using ConsoleApplication1.DTO;
+using ConsoleApplication1.Services;
 using DbContext = ConsoleApplication1.DataAccess.DbDataContext;
 
 namespace ConsoleApplication1.pro
@@ -27,38 +30,50 @@ namespace ConsoleApplication1.pro
             var projects = allConfig.ProjectConfList;
             //   projects.ForEach(o => o.CreateConnectionUrl());
             Console.WriteLine("project are ready");
-            var projectConfig = projects[0];
-            new ProjectController(projectConfig).getStatistics();
-            //Task.Factory.StartNew(() => new ProjectController(projectConfig).getStatistics());
+
+            var projectControllers = new List<ProjectController>();
+            projects.ForEach(o => { projectControllers.Add(new ProjectController(o)); });
+            //Parallel.ForEach(projects, current => new ProjectController(current).getStatistics());
+            Parallel.ForEach(projectControllers, current => current.getStatistics());
+
+            Send(projectControllers);
         }
 
 
-    
-
-        public void Nevedomaya()
+        private void Send(IEnumerable<ProjectController> controllers)
         {
-            /*var test1 = context.CiceroneSessions
-                   .Where(p => p.SessionCreateDate >= new DateTime(2019, 01, 01))
-                   .GroupBy(p => p.distributorId)
-                   .Select(p => new
-                   {
-                       distributorId = p.Key, firstSync = p.Min(s => s.SessionCreateDate),
-                       lastSync = p.Max(s => s.SessionCreateDate)
-                   });*/
-
-            /*
-            var test1 = context.rdTestDbo
-                .Where(p => p.dateTimeStamp >= new DateTime(2019, 01, 01))
-                .GroupBy(p => p.printDocNum)
-                .Select(p => new RdTestModel()
+            var config = AllConfig.GetInstance();
+            if (config.supervisorRecipientsList.Count <= 1)
+            {
+                if (String.IsNullOrWhiteSpace(config.supervisorRecipientsList[0]))
                 {
-                    printDocNum = p.Key, firstSync = p.Min(s => s.dateTimeStamp),
-                    lastSync = p.Max(s => s.dateTimeStamp)
-                }).ToList();
-                */
+                    Console.WriteLine("Отсутвует список рассылки супервайзера");
+                    return;
+                }
+            }
 
+            var outputDateFormat = "MMM yyyy";
 
-            Console.WriteLine(10);
+            DateTime tmpDate = DateTime.ParseExact(config.date, "yyyyMMdd",
+                CultureInfo.InvariantCulture);
+
+            string fileBaseName = "статистика использования R4000 за " + tmpDate.ToString(outputDateFormat);
+
+            List<Attachment> attachments = new List<Attachment>();
+            foreach (var controller in controllers)
+            {
+                if (controller.excelAttachment != null)
+                {
+                    attachments.Add(controller.excelAttachment);
+                }
+            }
+
+            var smtpEmailService = new SmtpEmailService(config.mailServer, int.Parse(config.mailPort),
+                config.mailUser, config.mailPassword);
+
+            smtpEmailService.Send(fileBaseName, "отчет в приложении",
+                config.mailUser, config.supervisorRecipientsList.ToArray(), new string[0], new string[0],
+                attachments);
         }
     }
 }

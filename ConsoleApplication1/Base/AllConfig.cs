@@ -24,7 +24,6 @@ namespace ConsoleApplication1.Base
             set => supervisorRecipientsList.AddRange(value.Split(';'));
         }
 
-
         [XmlElement("delimiter")]
         public string delimiter
         {

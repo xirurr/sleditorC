@@ -120,7 +120,6 @@
     <Compile Include="Base\AllConfig.cs" />
     <Compile Include="Base\ProjectConfig.cs" />
     <Compile Include="Base\ProjectController.cs" />
-    <Compile Include="CsvExport.cs" />
     <Compile Include="DataAccess\DbDataContext.cs" />
     <Compile Include="DataAccess\DTO\CiceroneDistributorsDTO.cs" />
     <Compile Include="DataAccess\DTO\CiceroneSessionsModel.cs" />
@@ -140,6 +139,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="pro\Start.cs" />
+    <Compile Include="Services\CsvExport.cs" />
     <Compile Include="Services\SmtpEmailService.cs" />
     <Compile Include="Services\IOutgoingEmailService.cs" />
     <Compile Include="Services\SqlConnectService.cs" />

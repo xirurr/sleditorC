@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using ConsoleApplication1.Base;
 using NLog;
 using NLog.Fluent;
 
 namespace ConsoleApplication1.Services
 {
-        public class SmtpEmailService : IOutgoingEmailService
+    public class SmtpEmailService : IOutgoingEmailService
     {
         private readonly string username;
         private readonly string password;
@@ -50,7 +51,8 @@ namespace ConsoleApplication1.Services
         /// string: attachment mime type name
         /// string: attachment content id (CID)
         /// </param>
-        public void Send(string subject, string message, string from, string[] recipients, string[] cc, string[] bcc, Tuple<Stream, string, string, string>[] attachments)
+        public void Send(string subject, string message, string from, string[] recipients, string[] cc, string[] bcc,
+            Tuple<Stream, string, string, string>[] attachments)
         {
             var atts = new List<Attachment>();
 
@@ -67,7 +69,8 @@ namespace ConsoleApplication1.Services
             Send(subject, message, from, recipients, cc, bcc, atts);
         }
 
-        public void Send(string subject, string message, string from, string[] recipients, string[] cc, string[] bcc, Tuple<string, string>[] attachments)
+        public void Send(string subject, string message, string from, string[] recipients, string[] cc, string[] bcc,
+            Tuple<string, string>[] attachments)
         {
             var atts = new List<Attachment>();
 
@@ -81,7 +84,8 @@ namespace ConsoleApplication1.Services
             Send(subject, message, from, recipients, cc, bcc, atts);
         }
 
-        public void Send(string subject, string message, string from, string[] recipients, string[] cc, string[] bcc, ICollection<Attachment> attachments)
+        public void Send(string subject, string message, string from, string[] recipients, string[] cc, string[] bcc,
+            ICollection<Attachment> attachments)
         {
             logger.Trace().Message("Try to send Email")
                 .Property("subject", subject ?? "null")
@@ -124,11 +128,17 @@ namespace ConsoleApplication1.Services
                 try
                 {
                     client.Send(email);
-                    logger.Info().Message($"Email sent. Subject:{subject}. Recepients:{string.Join(";", recipients)}. Attachments: {attachments.Count}").Write();
+                    logger.Info()
+                        .Message(
+                            $"Email sent. Subject:{subject}. Recepients:{string.Join(";", recipients)}. Attachments: {attachments.Count}")
+                        .Write();
                 }
                 catch (Exception ex)
                 {
-                    logger.Error().Exception(ex).Message($"Error sending email. Subject:{subject}. Recepients:{string.Join("; ", recipients)}. Attachments: {attachments.Count}").Write();
+                    logger.Error().Exception(ex)
+                        .Message(
+                            $"Error sending email. Subject:{subject}. Recepients:{string.Join("; ", recipients)}. Attachments: {attachments.Count}")
+                        .Write();
                 }
             }
         }

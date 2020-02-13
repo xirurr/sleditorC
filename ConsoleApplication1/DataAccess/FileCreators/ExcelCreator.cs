@@ -23,20 +23,29 @@ namespace ConsoleApplication1.DataAccess.FileCreators
             var workbook = new HSSFWorkbook();
             var sheet = workbook.CreateSheet("DistributorStatistic");
             var rowhead = sheet.CreateRow((short) rownum++);
-            List<string> characteristics = new List<string>(statisticList[0].listElements().Keys);
-            for (int i = 0; i < characteristics.Count; i++)
+            if (statisticList.Count > 0)
             {
-                rowhead.CreateCell(i).SetCellValue(characteristics[i]);
-            }
-            foreach (var statistic in statisticList)
-            {
-                var row = sheet.CreateRow((short) rownum++);
-                List<string> listOfElements = new List<string>(statistic.listElements().Values);
-
-                for (int i = 0; i < listOfElements.Count; i++)
+                List<string> characteristics = new List<string>(statisticList[0].listElements().Keys);
+                for (int i = 0; i < characteristics.Count; i++)
                 {
-                    row.CreateCell(i).SetCellValue(listOfElements[i]);
+                    rowhead.CreateCell(i).SetCellValue(characteristics[i]);
                 }
+                foreach (var statistic in statisticList)
+                {
+                    var row = sheet.CreateRow((short) rownum++);
+                    List<string> listOfElements = new List<string>(statistic.listElements().Values);
+
+                    for (int i = 0; i < listOfElements.Count; i++)
+                    {
+                        row.CreateCell(i).SetCellValue(listOfElements[i]);
+                    }
+                }
+              
+            }
+            else
+            {
+                rowhead.CreateCell(0).SetCellValue("Отсутвуют данные за период");
+
             }
             var fileStream = fileInfo.Create();
             workbook.Write(fileStream);

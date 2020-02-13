@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afea08e6-63dd-4999-9880-921a0debeae0" name="Default Changelist" comment="">
+    <list default="true" id="afea08e6-63dd-4999-9880-921a0debeae0" name="Default Changelist" comment="проверена работа на одном дистре, без многопоточности. количество равно java">
+      <changelist_data name="" email="" />
+      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Services/CsvExport.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/AbstractCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/AbstractCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +42,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="ch_erwin_alpha@dbsrv" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ch_erwin_alpha@dbsrv" type="feb32156:DbDataSourceImpl" />
-        <item name="ch_erwin_alpha: database" type="ccb7ac2a:MsImplModel$Database" />
-      </path>
     </expand>
     <select />
   </component>
@@ -51,32 +52,37 @@
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Base/ProjectConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/15/9b7825b4/Thread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Services/CsvExport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Services/IOutgoingEmailService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/refDistributorsDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Exceptions/LackOfInformationException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/37/fc94f041/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Exceptions/EmptyConfigFieldException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Protocol.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E8D4299-BFA6-4998-B1C3-A8500640BE45/8b/b5264f6d/DateTimeParse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/862B9365-843C-4BF1-BA93-210C124BB523/53/ea51025c/AttachmentCollection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/80/7221be78/Parallel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DB822D-E6C4-49C2-A425-BD1B471FFCED/bb/42020e08/Database.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DB822D-E6C4-49C2-A425-BD1B471FFCED/0c/275a66ac/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Services/SqlConnectService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6B489A92-E2A4-446D-A3E6-5EB322E4C7BD/e9/1fe83e7c/SqlConnectionStringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/App.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/CsvExport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/AbstractCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileReaders/XmlReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileReaders/IXmlReader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E8D4299-BFA6-4998-B1C3-A8500640BE45/c5/750647f4/String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/862B9365-843C-4BF1-BA93-210C124BB523/81/a6738c73/SmtpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E8D4299-BFA6-4998-B1C3-A8500640BE45/04/2667a87e/__Error.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneDistributorsDTO.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -98,7 +104,6 @@
         <option value="$PROJECT_DIR$/ConsoleApplication1/config.xml" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/pro/LENA.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Services/SqlConnectService.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/refDistributors.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsModel.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/rdTestModel.cs" />
@@ -107,24 +112,25 @@
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DBContext.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessions.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneSessionsDTO.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModelR.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/HTMLCreator.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectConfig.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/CiceroneDistributorsDTO.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/refDistributorsDTO.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Services/CsvExportWithDelimiters.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Services/CsvDelimiterService.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Services/CsvWithEncoding.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2d9d14ff-0a6b-4b5d-9531-8372ed7013a1/console.sql" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/AbstractCreator.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/StatisticModel.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" />
       </list>
     </option>
   </component>
@@ -135,12 +141,6 @@
         <option value="C:\Users\gg\YandexDisk\GIT\C#\Solution1\.idea\.idea.Solution1\.idea" />
       </set>
     </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1934" />
-    <option name="y" value="-234" />
-    <option name="width" value="1240" />
-    <option name="height" value="679" />
   </component>
   <component name="ProjectId" id="1XAqpYLa8mxs4Je7BsW9DGJ34S2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -231,7 +231,8 @@
       <workItem from="1581366932292" duration="8301000" />
       <workItem from="1581419815926" duration="697000" />
       <workItem from="1581450733701" duration="4110000" />
-      <workItem from="1581461211766" duration="764000" />
+      <workItem from="1581461211766" duration="1056000" />
+      <workItem from="1581515502311" duration="3724000" />
     </task>
     <task id="LOCAL-00001" summary="проверено &#10;чтение р4000&#10;запись в цсв">
       <created>1581420450235</created>
@@ -240,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581420450236</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="проверена работа на одном дистре, без многопоточности. количество равно java">
+      <created>1581462108065</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581462108065</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +285,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="проверено &#10;чтение р4000&#10;запись в цсв" />
-    <option name="LAST_COMMIT_MESSAGE" value="проверено &#10;чтение р4000&#10;запись в цсв" />
+    <MESSAGE value="проверена работа на одном дистре, без многопоточности. количество равно java" />
+    <option name="LAST_COMMIT_MESSAGE" value="проверена работа на одном дистре, без многопоточности. количество равно java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#SQL_Dialects" timestamp="1581279641543">
@@ -296,86 +305,86 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="678" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1581168939423" />
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom" timestamp="1581454560360">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1581625431037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560360" />
-    <state width="1877" height="293" key="GridCell.Tab.0.center" timestamp="1581454560360">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581625431037" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1581625431037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560360" />
-    <state width="1877" height="293" key="GridCell.Tab.0.left" timestamp="1581454560360">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581625431037" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1581625431037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560360" />
-    <state width="1877" height="293" key="GridCell.Tab.0.right" timestamp="1581454560360">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581625431037" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1581625431037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560360" />
-    <state width="1877" height="293" key="GridCell.Tab.1.bottom" timestamp="1581454560361">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581625431037" />
+    <state width="1877" height="291" key="GridCell.Tab.1.bottom" timestamp="1581623583038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.1.center" timestamp="1581454560360">
+    <state width="1877" height="291" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583038" />
+    <state width="1877" height="291" key="GridCell.Tab.1.center" timestamp="1581623583037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560360" />
-    <state width="1877" height="293" key="GridCell.Tab.1.left" timestamp="1581454560360">
+    <state width="1877" height="291" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583037" />
+    <state width="1877" height="291" key="GridCell.Tab.1.left" timestamp="1581623583037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560360" />
-    <state width="1877" height="293" key="GridCell.Tab.1.right" timestamp="1581454560361">
+    <state width="1877" height="291" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583037" />
+    <state width="1877" height="291" key="GridCell.Tab.1.right" timestamp="1581623583038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.2.bottom" timestamp="1581454560361">
+    <state width="1877" height="291" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583038" />
+    <state width="1877" height="291" key="GridCell.Tab.2.bottom" timestamp="1581623583039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.2.center" timestamp="1581454560361">
+    <state width="1877" height="291" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583039" />
+    <state width="1877" height="291" key="GridCell.Tab.2.center" timestamp="1581623583038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.2.left" timestamp="1581454560361">
+    <state width="1877" height="291" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583038" />
+    <state width="1877" height="291" key="GridCell.Tab.2.left" timestamp="1581623583038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.2.right" timestamp="1581454560361">
+    <state width="1877" height="291" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583038" />
+    <state width="1877" height="291" key="GridCell.Tab.2.right" timestamp="1581623583038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.3.bottom" timestamp="1581454560362">
+    <state width="1877" height="291" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583038" />
+    <state width="1877" height="291" key="GridCell.Tab.3.bottom" timestamp="1581623583039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560362" />
-    <state width="1877" height="293" key="GridCell.Tab.3.center" timestamp="1581454560361">
+    <state width="1877" height="291" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583039" />
+    <state width="1877" height="291" key="GridCell.Tab.3.center" timestamp="1581623583039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.3.left" timestamp="1581454560361">
+    <state width="1877" height="291" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583039" />
+    <state width="1877" height="291" key="GridCell.Tab.3.left" timestamp="1581623583039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.3.right" timestamp="1581454560361">
+    <state width="1877" height="291" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583039" />
+    <state width="1877" height="291" key="GridCell.Tab.3.right" timestamp="1581623583039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560361" />
-    <state width="1877" height="293" key="GridCell.Tab.4.bottom" timestamp="1581454560362">
+    <state width="1877" height="291" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583039" />
+    <state width="1877" height="291" key="GridCell.Tab.4.bottom" timestamp="1581623583040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560362" />
-    <state width="1877" height="293" key="GridCell.Tab.4.center" timestamp="1581454560362">
+    <state width="1877" height="291" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583040" />
+    <state width="1877" height="291" key="GridCell.Tab.4.center" timestamp="1581623583040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560362" />
-    <state width="1877" height="293" key="GridCell.Tab.4.left" timestamp="1581454560362">
+    <state width="1877" height="291" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583040" />
+    <state width="1877" height="291" key="GridCell.Tab.4.left" timestamp="1581623583040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560362" />
-    <state width="1877" height="293" key="GridCell.Tab.4.right" timestamp="1581454560362">
+    <state width="1877" height="291" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583040" />
+    <state width="1877" height="291" key="GridCell.Tab.4.right" timestamp="1581623583040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="293" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581454560362" />
+    <state width="1877" height="291" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581623583040" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1581450797881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -392,10 +401,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="499" y="233" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581157255556" />
-    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1581263739015">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1581462110841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1581263739015" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581462110841" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1581621960107">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1581621960107" />
     <state x="-195" y="316" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581452429287">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -408,10 +421,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="637" y="252" width="646" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581157277399" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1580511982638">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1581626173099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1580511982638" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581626173099" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581162800964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -425,17 +438,30 @@
           <option name="timeStamp" value="2" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs</url>
-          <line>69</line>
-          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" initialLine="66">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs</url>
+          <line>73</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" initialLine="70">
             <startOffsets>
-              <option value="1845" />
+              <option value="2525" />
             </startOffsets>
             <endOffsets>
-              <option value="1902" />
+              <option value="2718" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs</url>
+          <line>110</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" initialLine="110">
+            <startOffsets>
+              <option value="4301" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4340" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

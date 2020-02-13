@@ -15,7 +15,6 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="ConsoleApplication1.csproj" t="IncludeRecursive" />
-        <e p="CsvExport.cs" t="Include" />
         <e p="DataAccess" t="Include">
           <e p="DbDataContext.cs" t="Include" />
           <e p="DTO" t="Include">
@@ -53,6 +52,7 @@
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="Services" t="Include">
+          <e p="CsvExport.cs" t="Include" />
           <e p="IOutgoingEmailService.cs" t="Include" />
           <e p="SmtpEmailService.cs" t="Include" />
           <e p="SqlConnectService.cs" t="Include" />
