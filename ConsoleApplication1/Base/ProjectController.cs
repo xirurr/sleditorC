@@ -61,42 +61,49 @@ namespace ConsoleApplication1.Base
         {
             Console.WriteLine("получение данных по протоколу R4000 для " + projectConfig.dataBase);
             var query = context.Database.SqlQuery<StatisticModel>(
-                "select MAX(ChangeDate) ChangeDate, idRecord\n" +
-                "into #cd1\n" +
-                "from v_LogDataChange \n" +
-                "where tableName = 'refDistributorsExt' \n" +
-                "and idRecord in (select id from refDistributors) and FieldName = 'usereplicator4000'\n" +
-                "group by idRecord;\n" +
-                "select eal.TenantId, MIN(LastSync) firstSync, MAX(LastSync) lastSync\n" +
-                "into #statistc\n" +
-                "from hub.ExchangeAuditLog eal\n" +
-                "where Date >=\'" + instance.date + "\' \n" +
-                "group by TenantId;\n" +
-                "with st as(\n" +
-                "select ChangeDate, idRecord, NewValue useReplicator4000Log from v_LogDataChange where (ChangeDate in (select ChangeDate from #cd1) and idRecord in (select idRecord from #cd1) and FieldName = 'usereplicator4000')\n" +
-                "),\n" +
-                "finalStat as \n" +
-                "(select rde.UseReplicator4000 useReplicator4000, rde.id idDistr,st.ChangeDate ChangeDate, st.idRecord, st.useReplicator4000Log useReplicator4000Log from refDistributorsExt  rde\n" +
-                "left join st on st.idRecord = rde.id\n" +
-                ")\n" +
-                "select rd.NodeID statisticNodeId, rd.id statistcDistr,  rd.Name statisticName, firstSync, lastSync, fs.ChangeDate dateOfChange, CAST (fs.useReplicator4000 as VARCHAR) useReplicator4000, fs.useReplicator4000Log from #statistc st\n" +
-                "join refDistributors rd on rd.NodeID = st.TenantId\n" +
-                "join finalStat fs on fs.idDistr = rd.id \n" +
-                "drop table #cd1,#statistc"
+                "with tmpSe as (\n"+
+                "select eal.TenantId, MIN(LastSync) firstSync, MAX(LastSync) lastSync \n"+
+                "from hub.ExchangeAuditLog eal \n"+
+                "where Date >=\'"+ instance.date+"\' \n"+
+                "group by TenantId)\n"+
+                "\n"+
+                "select t.firstSync, t.lastSync, rd.NodeID, rd.id \n"+
+                "into #sessions\n"+
+                "from tmpSe t\n"+
+                "join refDistributors rd on t.TenantId = rd.NodeID\n"+
+                "\n"+
+                "select rd.NodeID, rde.UseReplicator4000, rd.id distrId\n"+
+                "into #current\n"+
+                "from refDistributorsExt rde\n"+
+                "join refDistributors rd on rd.id = rde.id\n"+
+                "where rde.UseReplicator4000 = 1\n"+
+                "\n"+
+                "select firstSync,lastSync,UseReplicator4000, COALESCE(se.NodeID,cu.NodeID ) NodeID,COALESCE(se.id, cu.distrid) DistributorId \n"+
+                "into #combinedData\n"+
+                "from #sessions se\n"+
+                "full outer join #current cu on cu.NodeID = se.NodeID\n"+
+                "\n"+
+                "select cd.firstSync, cd.lastSync,CAST (rde.UseReplicator4000 AS VARCHAR) UseReplicator4000, rd.Nodeid statisticNodeId, rd.name statisticName,COALESCE(cd.DistributorId,ld.idDistr) statistcDistr, ld.changeDate dateOfChange from #combinedData cd\n"+
+                "full outer join \n"+
+                "(select MAX(ChangeDate) changeDate, idRecord idDistr\n"+
+                "from v_LogDataChange where TableName = 'refDistributorsExt' and FieldName = 'UseReplicator4000'\n"+
+                "and ChangeDate >=\'"+ instance.date+"\' \n"+
+                "and idRecord in (select id from refDistributors)\n"+
+                "group by idRecord) ld on ld.idDistr = cd.DistributorId\n"+
+                "join refDistributorsExt rde on rde.id = COALESCE(cd.DistributorId,ld.idDistr)\n"+
+                "join refDistributors rd on rd.id = rde.id\n"+
+                "\n"+
+                "\n"+
+                "drop table #sessions,#current, #combinedData\n"
             );
-
             try
             {
                 foreach (var statisticModel in query)
                 {
                     var statistic = new Statistic();
-                    if (!statisticModel.useReplicator4000.Equals(statisticModel.useReplicator4000Log))
-                    {
-                        statistic.dateOfChange = null;
-                    }
+                    statistic.dateOfChange = statisticModel.dateOfChange;
 
-                    if (String.IsNullOrWhiteSpace(statisticModel.useReplicator4000) ||
-                        statisticModel.useReplicator4000.Equals("0"))
+                    if (statisticModel.useReplicator4000.Equals("0"))
                     {
                         statistic.status = "Disabled";
                     }

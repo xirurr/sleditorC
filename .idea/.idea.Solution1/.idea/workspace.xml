@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afea08e6-63dd-4999-9880-921a0debeae0" name="Default Changelist" comment="проверена работа на одном дистре, без многопоточности. количество равно java">
+    <list default="true" id="afea08e6-63dd-4999-9880-921a0debeae0" name="Default Changelist" comment="добавлена рассылка по супервизору&#10;доабвлена возможность пустых рецепиентов&#10;исправлена бага с превышенным временем ожидания данных от БД">
       <changelist_data name="" email="" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApplication1/Services/CsvExport.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Base/AllConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Services/SmtpEmailService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +50,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/37/fc94f041/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Exceptions/EmptyConfigFieldException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Protocol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/862B9365-843C-4BF1-BA93-210C124BB523/53/ea51025c/AttachmentCollection.cs" root0="SKIP_HIGHLIGHTING" />
@@ -70,7 +58,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DB822D-E6C4-49C2-A425-BD1B471FFCED/bb/42020e08/Database.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/13DB822D-E6C4-49C2-A425-BD1B471FFCED/0c/275a66ac/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Services/SqlConnectService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6B489A92-E2A4-446D-A3E6-5EB322E4C7BD/e9/1fe83e7c/SqlConnectionStringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
@@ -129,8 +116,8 @@
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" />
       </list>
     </option>
   </component>
@@ -233,6 +220,8 @@
       <workItem from="1581450733701" duration="4110000" />
       <workItem from="1581461211766" duration="1056000" />
       <workItem from="1581515502311" duration="3724000" />
+      <workItem from="1581669775428" duration="1203000" />
+      <workItem from="1581724968838" duration="2646000" />
     </task>
     <task id="LOCAL-00001" summary="проверено &#10;чтение р4000&#10;запись в цсв">
       <created>1581420450235</created>
@@ -248,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581462108065</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="добавлена рассылка по супервизору&#10;доабвлена возможность пустых рецепиентов&#10;исправлена бага с превышенным временем ожидания данных от БД">
+      <created>1581633050982</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581633050982</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +282,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="проверено &#10;чтение р4000&#10;запись в цсв" />
     <MESSAGE value="проверена работа на одном дистре, без многопоточности. количество равно java" />
-    <option name="LAST_COMMIT_MESSAGE" value="проверена работа на одном дистре, без многопоточности. количество равно java" />
+    <MESSAGE value="добавлена рассылка по супервизору&#10;доабвлена возможность пустых рецепиентов&#10;исправлена бага с превышенным временем ожидания данных от БД" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлена рассылка по супервизору&#10;доабвлена возможность пустых рецепиентов&#10;исправлена бага с превышенным временем ожидания данных от БД" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#SQL_Dialects" timestamp="1581279641543">
@@ -401,18 +398,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="499" y="233" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581157255556" />
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1581462110841">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1581633059431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581462110841" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581633059431" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1581621960107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1581621960107" />
-    <state x="-195" y="316" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581452429287">
+    <state x="113" y="-20" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581734864381">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-195" y="316" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581452429287" />
+    <state x="113" y="-20" width="1736" height="856" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581734864381" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1581166892352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
