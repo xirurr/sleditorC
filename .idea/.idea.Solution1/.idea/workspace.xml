@@ -5,6 +5,7 @@
       <changelist_data name="" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" afterDir="false" />
@@ -115,9 +116,9 @@
         <option value="$PROJECT_DIR$/ConsoleApplication1/pro/Start.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/ExcelCreator.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/FileCreators/CSVCreator.cs" />
-        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DbDataContext.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Base/ProjectController.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/DataAccess/DTO/Statistic.cs" />
       </list>
     </option>
   </component>
@@ -222,6 +223,7 @@
       <workItem from="1581515502311" duration="3724000" />
       <workItem from="1581669775428" duration="1203000" />
       <workItem from="1581724968838" duration="2646000" />
+      <workItem from="1581760133429" duration="3218000" />
     </task>
     <task id="LOCAL-00001" summary="проверено &#10;чтение р4000&#10;запись в цсв">
       <created>1581420450235</created>

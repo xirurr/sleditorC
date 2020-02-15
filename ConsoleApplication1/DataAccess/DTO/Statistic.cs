@@ -113,7 +113,7 @@ namespace ConsoleApplication1.DTO
             parameters.Add("NodeId", nodeId.ToString());
             parameters.Add("ID дистрибьютора", distrId.ToString());
             parameters.Add(
-                "Дата включения/отключения R4000", dateOfChange.ToString());
+                "Дата включения/отключения R4000",dateOfChange!=null? dateOfChange.ToString(): "вне периода сверки");
             parameters.Add("протокол", protocol.ToString());
             parameters.Add("состояние", status);
             parameters.Add(

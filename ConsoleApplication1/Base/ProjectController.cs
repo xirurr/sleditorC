@@ -46,7 +46,6 @@ namespace ConsoleApplication1.Base
             {
                 return null;
             }
-
             GetCiceroneData();
             csvCreator = new CSVCreator(projectConfig.dataBase);
             excelCreator = new ExcelCreator(projectConfig.dataBase);
@@ -66,23 +65,23 @@ namespace ConsoleApplication1.Base
                 "from hub.ExchangeAuditLog eal \n"+
                 "where Date >=\'"+ instance.date+"\' \n"+
                 "group by TenantId)\n"+
-                "\n"+
+                
                 "select t.firstSync, t.lastSync, rd.NodeID, rd.id \n"+
                 "into #sessions\n"+
                 "from tmpSe t\n"+
                 "join refDistributors rd on t.TenantId = rd.NodeID\n"+
-                "\n"+
+                
                 "select rd.NodeID, rde.UseReplicator4000, rd.id distrId\n"+
                 "into #current\n"+
                 "from refDistributorsExt rde\n"+
                 "join refDistributors rd on rd.id = rde.id\n"+
                 "where rde.UseReplicator4000 = 1\n"+
-                "\n"+
+                
                 "select firstSync,lastSync,UseReplicator4000, COALESCE(se.NodeID,cu.NodeID ) NodeID,COALESCE(se.id, cu.distrid) DistributorId \n"+
                 "into #combinedData\n"+
                 "from #sessions se\n"+
                 "full outer join #current cu on cu.NodeID = se.NodeID\n"+
-                "\n"+
+
                 "select cd.firstSync, cd.lastSync,CAST (rde.UseReplicator4000 AS VARCHAR) UseReplicator4000, rd.Nodeid statisticNodeId, rd.name statisticName,COALESCE(cd.DistributorId,ld.idDistr) statistcDistr, ld.changeDate dateOfChange from #combinedData cd\n"+
                 "full outer join \n"+
                 "(select MAX(ChangeDate) changeDate, idRecord idDistr\n"+
@@ -92,8 +91,7 @@ namespace ConsoleApplication1.Base
                 "group by idRecord) ld on ld.idDistr = cd.DistributorId\n"+
                 "join refDistributorsExt rde on rde.id = COALESCE(cd.DistributorId,ld.idDistr)\n"+
                 "join refDistributors rd on rd.id = rde.id\n"+
-                "\n"+
-                "\n"+
+                
                 "drop table #sessions,#current, #combinedData\n"
             );
             try
@@ -111,7 +109,6 @@ namespace ConsoleApplication1.Base
                     {
                         statistic.status = "Enabled";
                     }
-
                     statistic.nameOfDistr = statisticModel.statisticName;
                     statistic.nodeId = statisticModel.statisticNodeId;
                     statistic.distrId = statisticModel.statistcDistr;
@@ -129,16 +126,13 @@ namespace ConsoleApplication1.Base
                     Console.WriteLine("Ошибка логина " + projectConfig.server);
                     return false;
                 }
-
                 Console.WriteLine(e.Message);
                 throw;
             }
-
             if (statisticList.Count == 0)
             {
                 Console.WriteLine(projectConfig.dataBase + " отсутствуют данные по R4000");
             }
-
             return true;
         }
 
@@ -172,8 +166,7 @@ namespace ConsoleApplication1.Base
                         statistic.status = "Disabled";
                     }
                     else statistic.status = "Enabled";
-
-
+                    
                     if (!string.IsNullOrWhiteSpace(statisticModel.firstSync.ToString()))
                     {
                         statistic.firstSession = statisticModel.firstSync;
@@ -263,8 +256,7 @@ namespace ConsoleApplication1.Base
             excelAttachment = new Attachment(excelCreator.filePath);
             csvAttachment.Name = fileBaseName + ".csv";
             excelAttachment.Name = fileBaseName + ".xls";
-
-
+            
             if (projectConfig.recipientsForOneList.Count <= 1)
             {
                 if (string.IsNullOrWhiteSpace(projectConfig.recipientsForOneList[0]))
@@ -277,15 +269,11 @@ namespace ConsoleApplication1.Base
             var smtpEmailService = new SmtpEmailService(instance.mailServer, int.Parse(instance.mailPort),
                 instance.mailUser,
                 instance.mailPassword);
-
-
+            
             List<Attachment> attachments = new List<Attachment>();
-
-
             attachments.Add(csvAttachment);
             attachments.Add(excelAttachment);
-
-
+            
             smtpEmailService.Send("статистика использования по " + projectConfig.dataBase, "отчет в приложении",
                 instance.mailUser, projectConfig.recipientsForOneList.ToArray(), new string[0], new string[0],
                 attachments);
