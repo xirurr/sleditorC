@@ -5,7 +5,6 @@ using ConsoleApplication1.Exceptions;
 namespace ConsoleApplication1.DTO
 {
     public class StatisticModel
-  //  "select rd.NodeID, rd.id,  rd.Name NameOfDistributors, firstSync FirstSession, lastSync LastSession, fs.ChangeDate dateOfChange, fs.useReplicator4000, fs.useReplicator4000Log from #statistc st\n" +
 
     {
         public string Protocol { get; set; }

@@ -58,7 +58,7 @@ namespace ConsoleApplication1.Base
 
         private bool GetR4000Data()
         {
-            Console.WriteLine("получение данных по протоколу R4000 для " + projectConfig.dataBase);
+            Console.WriteLine("получение данных по протоколу R4000 для " + projectConfig.dataBase + " за "+ DateTime.ParseExact(instance.date,"yyyyMMdd",CultureInfo.InvariantCulture));
             var query = context.Database.SqlQuery<StatisticModel>(
                 "with tmpSe as (\n"+
                 "select eal.TenantId, MIN(LastSync) firstSync, MAX(LastSync) lastSync \n"+

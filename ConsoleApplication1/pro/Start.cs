@@ -28,12 +28,10 @@ namespace ConsoleApplication1.pro
         {
             var allConfig = AllConfig.GetInstance();
             var projects = allConfig.ProjectConfList;
-            //   projects.ForEach(o => o.CreateConnectionUrl());
             Console.WriteLine("project are ready");
 
             var projectControllers = new List<ProjectController>();
             projects.ForEach(o => { projectControllers.Add(new ProjectController(o)); });
-            //Parallel.ForEach(projects, current => new ProjectController(current).getStatistics());
             Parallel.ForEach(projectControllers, current => current.getStatistics());
 
             Send(projectControllers);

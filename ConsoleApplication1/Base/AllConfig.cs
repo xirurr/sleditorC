@@ -49,7 +49,6 @@ namespace ConsoleApplication1.Base
 
         [XmlElement("mailPassword")] public string mailPassword { get; set; }
 
-
         private AllConfig()
         {
         }
@@ -58,7 +57,11 @@ namespace ConsoleApplication1.Base
         {
             try
             {
-                return _instance ?? (_instance = _xmlReader.GetObject("config.xml"));
+                if (_instance != null) return _instance;
+                _instance = _xmlReader.GetObject("config.xml");
+                _instance.getDatedInstance();
+                return
+                    _instance;
             }
             catch (Exception ex)
             {
@@ -72,9 +75,24 @@ namespace ConsoleApplication1.Base
             return _instance;
         }
 
-        private void ReadConfig()
+        private void getDatedInstance()
         {
-            _xmlReader.GetObject("config.xml");
+            if (_instance.date.ToLowerInvariant().Equals("month"))
+            {
+                date = getPreviousDate();
+            }
+        }
+
+        private static string getPreviousDate()
+        {
+            var todayYear = DateTime.Today.Year;
+            var todayMonth = DateTime.Today.Month;
+            if (todayMonth == 1)
+            {
+                todayYear = DateTime.Today.AddYears(-1).Year;
+            }
+            var currentDate = new DateTime(todayYear, DateTime.Today.AddMonths(-1).Month, 1);
+            return currentDate.ToString("yyyyMMdd");
         }
     }
 }
