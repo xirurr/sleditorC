@@ -35,7 +35,7 @@ namespace ConsoleApplication1.Base
         private void PrepareConnectionToBd()
         {
             projectConfig.CreateConnectionUrl();
-            context = new DbDataContext(projectConfig.sqlBuilder.ToString());
+            context = new DbDataContext(projectConfig.server,projectConfig.sqlBuilder.ToString());
             
         }
 
@@ -52,7 +52,7 @@ namespace ConsoleApplication1.Base
             csvCreator.CreatCSV(statisticList);
             excelCreator.CreateExcel(statisticList);
             SendMail();
-            Console.WriteLine(projectConfig.dataBase + " работа выполнена");
+            ConsoleWriter.WriteSuccess(projectConfig.dataBase + " работа выполнена");
             return statisticList;
         }
 
@@ -123,15 +123,20 @@ namespace ConsoleApplication1.Base
             {
                 if (e.Message.Contains("0x80131904") || e.Message.Contains("Login failed."))
                 {
-                    Console.WriteLine("Ошибка логина " + projectConfig.server);
+                    ConsoleWriter.WriteError("Ошибка логина " + projectConfig.server);
+                    return false;
+                }
+                if (e.ToString().Contains("not accessible"))
+                {
+                    ConsoleWriter.WriteError(projectConfig.server + " не доступен");
                     return false;
                 }
                 Console.WriteLine(e.Message);
-                throw;
+                return false;
             }
             if (statisticList.Count == 0)
             {
-                Console.WriteLine(projectConfig.dataBase + " отсутствуют данные по R4000");
+                ConsoleWriter.WriteDanger(projectConfig.dataBase + " отсутствуют данные по R4000");
             }
             return true;
         }
@@ -181,7 +186,7 @@ namespace ConsoleApplication1.Base
             {
                 if (e.Message.Contains("cicerone.Distributors"))
                 {
-                    Console.WriteLine(projectConfig.dataBase + " :отсутствуют данные по Cicerone");
+                    ConsoleWriter.WriteDanger(projectConfig.dataBase + " :отсутствуют данные по Cicerone");
                 }
                 else
                 {
